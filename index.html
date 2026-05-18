@@ -1,159 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - SpeedTracking</title>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #f4f6f8;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1f2937;
-    line-height: 1.7;
-}
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 18px;
-    padding: 48px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
-    color: #111827;
-}
-h2 {
-    margin-top: 42px;
-    color: #111827;
-    font-size: 24px;
-}
-p, li {
-    font-size: 17px;
-}
-ul {
-    padding-left: 22px;
-}
-.subtitle {
-    color: #6b7280;
-    margin-bottom: 28px;
-}
-.card {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
-    padding: 22px;
-    margin-top: 20px;
-}
-a {
-    color: #2563eb;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-footer {
-    margin-top: 50px;
-    padding-top: 24px;
-    border-top: 1px solid #e5e7eb;
-    color: #6b7280;
-    font-size: 14px;
-}
-@media (max-width: 768px) {
-    .container {
-        margin: 16px;
-        padding: 28px;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101215">
+  <meta name="description" content="Privacy Policy for SpeedTracking — an iOS app that measures vehicle launch and gate times using on-device GPS and motion sensors. All data is processed locally on your device.">
+  <meta name="robots" content="index, follow">
+  <title>SpeedTracking — Privacy Policy</title>
+  <link rel="canonical" href="https://ipmdn.github.io/speed-tracking-privacy/">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0c0e11;
+      --panel: #161a1f;
+      --panel-soft: #1c2127;
+      --text: #f3f5f7;
+      --text-strong: #ffffff;
+      --muted: #aeb6c0;
+      --accent: #7dd7ff;
+      --accent-soft: rgba(125, 215, 255, 0.12);
+      --warning: #ffcc66;
+      --border: #262d36;
+      --border-strong: #323a45;
     }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(880px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    header.policy-header {
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
     h1 {
-        font-size: 30px;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5.5vw, 3rem);
+      line-height: 1.1;
+      color: var(--text-strong);
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
-}
-</style>
+
+    .meta {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin: 18px 0;
+    }
+
+    section.highlight {
+      background: linear-gradient(180deg, rgba(125, 215, 255, 0.06), rgba(125, 215, 255, 0.02));
+      border-color: rgba(125, 215, 255, 0.28);
+    }
+
+    section h2 {
+      margin: 0 0 14px;
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    section h3 {
+      margin: 22px 0 8px;
+      font-size: 1rem;
+      color: var(--text-strong);
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    p.muted, li.muted {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 8px 0 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    li strong {
+      color: var(--text-strong);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 215, 255, 0.35);
+      transition: border-color 120ms ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    code, kbd {
+      background: var(--panel-soft);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 0.9em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-strong);
+    }
+
+    footer.policy-footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    footer.policy-footer p {
+      margin: 4px 0;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 36px 0 60px;
+      }
+      section {
+        padding: 22px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main>
+    <header class="policy-header">
+      <span class="eyebrow">SpeedTracking</span>
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        <strong>Effective date:</strong> May 18, 2026 &nbsp;·&nbsp;
+        <strong>Last updated:</strong> May 18, 2026
+      </p>
+    </header>
 
-<div class="container">
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Last updated: May 11, 2026</p>
+    <section class="highlight">
+      <h2>Summary</h2>
+      <p>SpeedTracking is designed to process measurement data locally on your device. The app:</p>
+      <ul>
+        <li>Does <strong>not</strong> require an account, sign-in, or registration.</li>
+        <li>Does <strong>not</strong> collect, transmit, or sell any personal data.</li>
+        <li>Does <strong>not</strong> include third-party analytics, advertising SDKs, or tracking services.</li>
+        <li>Does <strong>not</strong> contact the developer's servers — there are no developer-operated servers.</li>
+        <li>Uses GPS and motion sensors strictly on-device to compute speed, distance, acceleration, and gate timing.</li>
+      </ul>
+    </section>
 
-    <p>
-        This Privacy Policy explains how SpeedTracking ("the App") collects, uses, and protects information when you use the application.
-    </p>
+    <section>
+      <h2>Who This Policy Applies To</h2>
+      <p>This Privacy Policy applies to the <strong>SpeedTracking</strong> mobile application ("the App") published on the Apple App Store. It explains how the App accesses device features, how locally stored data is handled, and the controls available to you.</p>
+    </section>
 
-    <div class="card">
-        <strong>Developer Contact</strong><br>
-        Email: <a href="mailto:ipmdn@icloud.com">ipmdn@icloud.com</a>
-    </div>
+    <section>
+      <h2>Data the App Uses</h2>
+      <p>The App accesses the following device capabilities only to provide its core functionality:</p>
+      <ul>
+        <li><strong>Location (GPS)</strong> — used during calibration and live test sessions to compute speed, distance, and gate times. Location is requested with the <em>While Using the App</em> authorization scope.</li>
+        <li><strong>Motion sensors</strong> — accelerometer, gyroscope, and device attitude (via Core Motion) are used to detect vehicle launch, estimate longitudinal acceleration, and improve timing through sensor fusion.</li>
+      </ul>
+      <p class="muted">Location and motion data are processed entirely on-device, in real time. They are not uploaded by the App and not retained beyond the local session/run data described below.</p>
+    </section>
 
-    <h2>Information We Collect</h2>
+    <section>
+      <h2>Data Stored Locally on Your Device</h2>
+      <p>The App stores the following information locally, in the App's private sandbox, using on-device databases and files:</p>
+      <ul>
+        <li><strong>Saved run results</strong> — gate times, maximum speed, average speed, duration, distance, and quality estimates for runs you complete.</li>
+        <li><strong>Run telemetry samples</strong> — time-series acceleration and speed used to render run charts and for later inspection.</li>
+        <li><strong>Metrics traces and Live Session logs</strong> — diagnostic logs generated by the App when logging is enabled.</li>
+        <li><strong>Vehicle profiles</strong> — optional textual information you enter (brand, model, type, year) and the vehicle associated with each saved run.</li>
+        <li><strong>Calibration data</strong> — calibration direction, quality score, sensor bias, noise floor, and the calibration trace.</li>
+        <li><strong>App settings</strong> — gate targets, stabilization parameters, sound preferences, and onboarding acceptance status.</li>
+      </ul>
+      <p>No account, sign-in, or cloud sync is required. Locally stored data remains on your device unless you choose to export a backup or share a log manually.</p>
+    </section>
 
-    <p>The App may access the following information and device features:</p>
+    <section>
+      <h2>What the App Does <em>Not</em> Collect</h2>
+      <ul>
+        <li>No advertising identifier (IDFA) is requested.</li>
+        <li>No contacts, photos, microphone, camera, calendar, reminders, or HealthKit data is accessed.</li>
+        <li>No browsing history, device identifiers, or telemetry is collected for the developer.</li>
+        <li>No data is sent to third-party analytics or crash-reporting services.</li>
+      </ul>
+    </section>
 
-    <ul>
-        <li>Location data (GPS)</li>
-        <li>Motion and sensor data</li>
-        <li>Vehicle speed measurements</li>
-        <li>App settings and locally stored session data</li>
-    </ul>
+    <section>
+      <h2>Backup Export and Import</h2>
+      <p>SpeedTracking includes optional <strong>Backup Export</strong> and <strong>Backup Import</strong> features. When you export a backup, the App creates a single JSON file containing local app data such as settings, vehicle profiles, saved runs, telemetry, metrics traces, and the Live Session log.</p>
+      <p>Backup export and import are initiated only by you, through the App's user interface. Exported backup files may leave the App sandbox depending on where you choose to save or share them (e.g., iCloud Drive, Files, AirDrop, email, or another destination selected via the system file picker).</p>
+      <p class="muted">You are responsible for storing, sharing, and deleting exported backup files outside the App. The developer has no access to these files.</p>
+    </section>
 
-    <h2>How Information Is Used</h2>
+    <section>
+      <h2>Deleting Your Data</h2>
+      <p>You can remove locally stored data at any time from inside the App:</p>
+      <ul>
+        <li><strong>Settings → History and Metrics Logs → Delete History / Metrics Logs:</strong> removes saved runs and/or run-chart metrics traces.</li>
+        <li><strong>Settings → Data → Delete saved data:</strong> removes saved runs, telemetry, logs, vehicle profiles, calibration data, and resets app settings on the device (onboarding acceptance is preserved).</li>
+        <li><strong>Delete the App:</strong> uninstalling SpeedTracking from your device removes all app-private storage created by the App.</li>
+      </ul>
+      <p class="muted">Deleting data inside the App does not automatically delete backup files you previously exported outside the App.</p>
+    </section>
 
-    <p>The collected information is used exclusively to:</p>
+    <section>
+      <h2>Permissions and System Controls</h2>
+      <p>iOS asks for your explicit permission the first time the App needs access to Location or Motion data. You can review and change these permissions at any time in <code>Settings → Privacy &amp; Security</code> and in <code>Settings → SpeedTracking</code>.</p>
+      <p>If Location permission is denied or restricted, GPS-dependent features (live tests, speed/distance calculation) will not function. The App will surface a notice when permission is required.</p>
+    </section>
 
-    <ul>
-        <li>Measure and calculate vehicle performance and speed</li>
-        <li>Improve accuracy and responsiveness of measurements</li>
-        <li>Store user sessions and preferences locally on the device</li>
-        <li>Provide app functionality requested by the user</li>
-    </ul>
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>SpeedTracking does not integrate third-party analytics, advertising SDKs, attribution services, or crash-reporting providers. The App does not sell, rent, or share personal data with third parties because no personal data is collected by the developer.</p>
+    </section>
 
-    <h2>Data Storage</h2>
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>SpeedTracking is not directed at children under 13. The App does not knowingly collect personal information from children. If you believe a child has provided personal information through the App, please contact the developer so any concerns can be addressed.</p>
+    </section>
 
-    <p>
-        All collected data is stored locally on the user's device unless explicitly stated otherwise in future app updates.
-    </p>
+    <section>
+      <h2>Safety and Measurement Accuracy</h2>
+      <p>SpeedTracking is intended for indicative measurements only. It is not a professional telemetry tool and should not be used as an official reference. Use the App responsibly, only in safe conditions, and in compliance with local laws and traffic regulations. The phone must be firmly mounted in the vehicle and must not be held in hand while driving. Do not operate the App in a way that distracts you while driving or compromises safety.</p>
+    </section>
 
-    <p>
-        The App does not sell personal data to third parties.
-    </p>
+    <section>
+      <h2>Security</h2>
+      <p>Locally stored data is kept within the App's sandbox using standard iOS data protection. Because the App does not transmit your data to remote servers, the primary safeguards are those provided by the iOS operating system (device passcode, system encryption, and per-app sandboxing).</p>
+    </section>
 
-    <h2>Third-Party Services</h2>
+    <section>
+      <h2>Your Rights</h2>
+      <p>Because the App does not collect or transmit personal data to the developer, there is no remote profile, account, or remote dataset to access, correct, or delete. You can exercise full control over your locally stored data through the in-app deletion controls described above. For questions related to privacy, contact the developer using the address below.</p>
+    </section>
 
-    <p>
-        The App currently does not use third-party analytics, advertising, or tracking services.
-    </p>
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>This Privacy Policy may be updated to reflect changes in the App or applicable regulations. The "Effective date" and "Last updated" fields at the top of this page will be revised accordingly. Material changes will be reflected here before being effective.</p>
+    </section>
 
-    <h2>Location Permission</h2>
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy or how the App handles data, please contact the developer:</p>
+      <p><strong>Developer:</strong> Matteo Del Negro<br>
+      <strong>Email:</strong> <a href="mailto:matteo.delnegro@icloud.com">matteo.delnegro@icloud.com</a></p>
+    </section>
 
-    <p>
-        Location access is required for speed calculation and performance measurements. Without location permission, some app features may not function correctly.
-    </p>
-
-    <h2>Children's Privacy</h2>
-
-    <p>
-        The App is not directed to children under the age of 13 and does not knowingly collect personal information from children.
-    </p>
-
-    <h2>Your Rights</h2>
-
-    <p>
-        You may contact the developer at any time regarding questions about privacy or requests related to your data.
-    </p>
-
-    <h2>Changes to This Privacy Policy</h2>
-
-    <p>
-        This Privacy Policy may be updated periodically. Any future changes will be published on this page.
-    </p>
-
-    <footer>
-        © 2026 SpeedTracking. All rights reserved.
+    <footer class="policy-footer">
+      <p>© 2026 Matteo Del Negro. All rights reserved.</p>
+      <p>SpeedTracking is an independent application not affiliated with Apple Inc.</p>
     </footer>
-</div>
-
+  </main>
 </body>
 </html>
